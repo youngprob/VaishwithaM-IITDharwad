@@ -68,35 +68,6 @@ uvicorn main:app --reload
 
 The API will be available at `http://localhost:8000`
 
-## Deployment
-
-📖 **For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)**
-
-### Quick Deploy Options:
-
-**🚀 Render.com (Recommended - Easiest):**
-1. Push code to GitHub
-2. Go to [render.com](https://render.com) and sign up
-3. Click "New Web Service" → Connect GitHub repo
-4. Build: `pip install -r requirements.txt`
-5. Start: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-6. Deploy! Get your URL in 5-10 minutes
-
-**🐳 Docker:**
-```bash
-docker build -t bill-extraction-api .
-docker run -p 8000:8000 bill-extraction-api
-```
-
-**☁️ Heroku:**
-```bash
-heroku create your-app-name
-heroku buildpacks:add heroku/python
-heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-apt
-git push heroku main
-```
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for complete step-by-step instructions for all platforms.
 
 ## Notes
 
